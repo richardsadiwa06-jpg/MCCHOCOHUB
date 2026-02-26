@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDCE3AF2-11ED-4DDF-87CF-6AD29790815C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MCCHSIS.DashBoard</StartupObject>
+    <RootNamespace>MCCHSIS</RootNamespace>
+    <AssemblyName>MCCHSIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MCCHSIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MCCHSIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Navigation\Delivery.vb" />
+    <Compile Include="Navigation\Supplier.vb" />
+    <Compile Include="Resources\DashBoard.Designer.vb">
+      <DependentUpon>DashBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Navigation\LOGINForm.Designer.vb">
+      <DependentUpon>LOGINForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\LOGINForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCAccountReg.Designer.vb">
+      <DependentUpon>UCAccountReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCAccountReg.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCCategoryM.Designer.vb">
+      <DependentUpon>UCCategoryM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCCategoryM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCDelivery.Designer.vb">
+      <DependentUpon>UCDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCDelivery.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCDiscountM.Designer.vb">
+      <DependentUpon>UCDiscountM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCDiscountM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCPOS.Designer.vb">
+      <DependentUpon>UCPOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCPOS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCProductM.Designer.vb">
+      <DependentUpon>UCProductM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCProductM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCStocks.Designer.vb">
+      <DependentUpon>UCStocks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCStocks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCSupplierM.Designer.vb">
+      <DependentUpon>UCSupplierM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCSupplierM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation\UCVATM.Designer.vb">
+      <DependentUpon>UCVATM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\UCVATM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DashBoard.resx">
+      <DependentUpon>DashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\LOGINForm.resx">
+      <DependentUpon>LOGINForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCAccountReg.resx">
+      <DependentUpon>UCAccountReg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCCategoryM.resx">
+      <DependentUpon>UCCategoryM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCDelivery.resx">
+      <DependentUpon>UCDelivery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCDiscountM.resx">
+      <DependentUpon>UCDiscountM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCPOS.resx">
+      <DependentUpon>UCPOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCProductM.resx">
+      <DependentUpon>UCProductM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCStocks.resx">
+      <DependentUpon>UCStocks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCSupplierM.resx">
+      <DependentUpon>UCSupplierM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation\UCVATM.resx">
+      <DependentUpon>UCVATM.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chocolate-food-background-realistic-style_98292-39170.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3456426.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
