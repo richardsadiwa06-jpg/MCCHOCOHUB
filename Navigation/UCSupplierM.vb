@@ -3,23 +3,21 @@ Imports System.Data.SqlClient
 
 Public Class UCSupplierM
 
-        Private Sub UCSupplierM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            LoadSuppliers()
-        End Sub
+    Private sup As New Supplier()
 
-        Private Sub LoadSuppliers()
-            Try
-                Dim sup As New Supplier()
-                dgvSupplier.DataSource = sup.GetSuppliers()
-            Catch
-                MessageBox.Show("Error loading suppliers.")
-            End Try
-        End Sub
+    Private Sub UCSupplierM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadSuppliers()
+    End Sub
+
+    Private Sub LoadSuppliers()
+
+        dgvSupplier.DataSource = sup.GetSuppliers()
+
+    End Sub
 
     Private Sub btnSupplierAdd_Click(sender As Object, e As EventArgs) Handles btnSupplierAdd.Click
         Try
-            Dim supplier As New Supplier()
-            If supplier.InsertSupplier(txtSupplierName.Text, txtSupplierAddress.Text, txtSupplierContactNo.Text) Then
+            If sup.InsertSupplier(txtSupplierName.Text, txtSupplierAddress.Text, txtSupplierContactNo.Text) Then
                 LoadSuppliers()
             End If
         Catch
@@ -28,15 +26,14 @@ Public Class UCSupplierM
     End Sub
 
     Private Sub btnUpdateSupplier_Click(sender As Object, e As EventArgs)
-            Try
-                Dim supplier As New Supplier()
-            If supplier.UpdateSupplier(txtSupplierName.Text, txtSupplierAddress.Text, txtSupplierContactNo.Text) Then
+        Try
+            If sup.UpdateSupplier(txtSupplierName.Text, txtSupplierAddress.Text, txtSupplierContactNo.Text) Then
                 LoadSuppliers()
             End If
         Catch ex As Exception
 
-            End Try
-        End Sub
+        End Try
+    End Sub
 
     Private Sub btnSupplierDelete_Click(sender As Object, e As EventArgs) Handles btnSupplierDelete.Click
         Try

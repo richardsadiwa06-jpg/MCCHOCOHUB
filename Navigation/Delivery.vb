@@ -3,7 +3,6 @@ Public Class Delivery
 
     Private connectionString As String = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MCCHSIS;Integrated Security=True;"
 
-
     Public Function InsertHeader(supplierID As Integer, transactionNo As String, deliveryDate As Date) As Boolean
         Dim query As String =
         "INSERT INTO dbo.DeliveryHT (Supplier_ID, Transaction_No, Delivery_Date) 
@@ -24,27 +23,6 @@ Public Class Delivery
             Return False
         End Try
     End Function
-
-    'Public Function InsertDeliveryHeader(supplierID As Integer, transactionNo As String, deliveryDate As Date) As Integer
-    '    Dim query As String =
-    '        "INSERT INTO dbo.DeliveryHT (Supplier_ID, Transaction_No, Delivery_Date) 
-    '         VALUES (@supplierID, @transactionNo, @deliveryDate);
-    '         SELECT SCOPE_IDENTITY();"
-    '    Try
-    '        Using con As New SqlConnection(connectionString)
-    '            Using cmd As New SqlCommand(query, con)
-    '                cmd.Parameters.AddWithValue("@supplierID", supplierID)
-    '                cmd.Parameters.AddWithValue("@transactionNo", transactionNo)
-    '                cmd.Parameters.AddWithValue("@deliveryDate", deliveryDate)
-    '                con.Open()
-    '                Return Convert.ToInt32(cmd.ExecuteScalar())
-    '            End Using
-    '        End Using
-    '    Catch ex As Exception
-    '        Throw New Exception("Error inserting delivery header: " & ex.Message)
-    '        Return -1
-    '    End Try
-    'End Function
 
     Public Function GetLastHeaderID() As Integer
         Dim id As Integer = 0
@@ -108,10 +86,7 @@ Public Class Delivery
         Dim dt As New DataTable()
         Try
             Using con As New SqlConnection(connectionString)
-                Dim query As String =
-            "SELECT Barcode, Item_Name, Description, Quantity, Cost_Price, Exp_Date
-                 FROM dbo.DeliveryDT
-                 WHERE DeliveryHT_ID = @deliveryHTID"
+                Dim query As String = "SELECT Barcode, Item_Name, Description, Quantity, Cost_Price, Exp_Date FROM dbo.DeliveryDT WHERE DeliveryHT_ID = @deliveryHTID"
                 Using cmd As New SqlCommand(query, con)
                     cmd.Parameters.AddWithValue("@deliveryHTID", deliveryHTID)
                     Using da As New SqlDataAdapter(cmd)

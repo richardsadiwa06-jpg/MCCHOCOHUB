@@ -47,7 +47,6 @@ Public Class UCDelivery
     End Sub
     Private Sub SetDeliveryDetailsEnabled(isEnabled As Boolean)
 
-
         txtDD_Barcode.Enabled = isEnabled
         txtDD_ItemName.Enabled = isEnabled
         txtDD_Description.Enabled = isEnabled
@@ -58,6 +57,7 @@ Public Class UCDelivery
         btnDD_Edit.Enabled = isEnabled
         btnDD_Delete.Enabled = isEnabled
         btnDD_Save.Enabled = isEnabled
+
     End Sub
 
     Private Sub btnDD_Add_Click(sender As Object, e As EventArgs) Handles btnDD_Add.Click
@@ -70,7 +70,7 @@ Public Class UCDelivery
 
     End Sub
 
-    Private Sub btnDeliveryProceed_Click(sender As Object, e As EventArgs) Handles btnDH_DeliveryProceed.Click
+    Private Sub txtDD_Description_TextChanged(sender As Object, e As EventArgs) Handles txtDD_Description.TextChanged
 
     End Sub
 End Class

@@ -105,7 +105,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Navigation\Category.vb" />
     <Compile Include="Navigation\Delivery.vb" />
+    <Compile Include="Navigation\Product.vb" />
     <Compile Include="Navigation\Supplier.vb" />
     <Compile Include="Resources\DashBoard.Designer.vb">
       <DependentUpon>DashBoard.vb</DependentUpon>

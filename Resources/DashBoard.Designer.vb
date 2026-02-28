@@ -311,8 +311,8 @@ Partial Class DashBoard
         '
         'PanelDashB
         '
+        Me.PanelDashB.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PanelDashB.BackColor = System.Drawing.SystemColors.Control
-        Me.PanelDashB.Controls.Add(Me.UcAccountReg1)
         Me.PanelDashB.Controls.Add(Me.Ucpos1)
         Me.PanelDashB.Controls.Add(Me.UcDelivery1)
         Me.PanelDashB.Controls.Add(Me.Ucvatm1)
@@ -321,7 +321,7 @@ Partial Class DashBoard
         Me.PanelDashB.Controls.Add(Me.UcProductM1)
         Me.PanelDashB.Controls.Add(Me.UcCategoryM1)
         Me.PanelDashB.Controls.Add(Me.UcDiscountM1)
-        Me.PanelDashB.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelDashB.Controls.Add(Me.UcAccountReg1)
         Me.PanelDashB.Location = New System.Drawing.Point(267, 108)
         Me.PanelDashB.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelDashB.Name = "PanelDashB"
@@ -330,8 +330,8 @@ Partial Class DashBoard
         '
         'UcAccountReg1
         '
+        Me.UcAccountReg1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UcAccountReg1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.UcAccountReg1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UcAccountReg1.Location = New System.Drawing.Point(0, 0)
         Me.UcAccountReg1.Margin = New System.Windows.Forms.Padding(5)
         Me.UcAccountReg1.Name = "UcAccountReg1"
@@ -350,8 +350,8 @@ Partial Class DashBoard
         '
         'UcDelivery1
         '
+        Me.UcDelivery1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UcDelivery1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.UcDelivery1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UcDelivery1.Location = New System.Drawing.Point(0, 0)
         Me.UcDelivery1.Margin = New System.Windows.Forms.Padding(5)
         Me.UcDelivery1.Name = "UcDelivery1"
@@ -360,8 +360,8 @@ Partial Class DashBoard
         '
         'Ucvatm1
         '
+        Me.Ucvatm1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Ucvatm1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Ucvatm1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Ucvatm1.Location = New System.Drawing.Point(0, 0)
         Me.Ucvatm1.Margin = New System.Windows.Forms.Padding(5)
         Me.Ucvatm1.Name = "Ucvatm1"
@@ -370,8 +370,8 @@ Partial Class DashBoard
         '
         'UcSupplierM1
         '
+        Me.UcSupplierM1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UcSupplierM1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.UcSupplierM1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UcSupplierM1.Location = New System.Drawing.Point(0, 0)
         Me.UcSupplierM1.Margin = New System.Windows.Forms.Padding(5)
         Me.UcSupplierM1.Name = "UcSupplierM1"
@@ -389,8 +389,8 @@ Partial Class DashBoard
         '
         'UcProductM1
         '
+        Me.UcProductM1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UcProductM1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.UcProductM1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UcProductM1.Location = New System.Drawing.Point(0, 0)
         Me.UcProductM1.Margin = New System.Windows.Forms.Padding(5)
         Me.UcProductM1.Name = "UcProductM1"
@@ -409,8 +409,8 @@ Partial Class DashBoard
         '
         'UcDiscountM1
         '
+        Me.UcDiscountM1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UcDiscountM1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.UcDiscountM1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UcDiscountM1.Location = New System.Drawing.Point(0, 0)
         Me.UcDiscountM1.Margin = New System.Windows.Forms.Padding(5)
         Me.UcDiscountM1.Name = "UcDiscountM1"
